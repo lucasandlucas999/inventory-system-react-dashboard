@@ -1,11 +1,16 @@
+import useDashboard from "../../hooks/useDashboard"
 
 
 export default function DashboardPage(){
+
+    const data = useDashboard();
+
     return (
         <>
             <h1>
-                Hello World !
+                {data ? JSON.stringify(data) : "Cargando..."}
             </h1>
         </>
     )
 } 
+
